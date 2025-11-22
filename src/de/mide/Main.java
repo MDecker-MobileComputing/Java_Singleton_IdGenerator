@@ -5,6 +5,11 @@ package de.mide;
  */
 public class Main {
 
+	/**
+	 * Methode holt sich die Referenz auf die Singleton-Instanz
+	 * des IdGenerators, fragt die nächste Id ab und schreibt
+	 * diese auf die Konsole.
+	 */
 	private static void methode() {
 		
 		IdGenerator generator = IdGenerator.getSingletonInstance();
@@ -13,6 +18,11 @@ public class Main {
 	}
 	
 	
+	/**
+	 * Einstiegsmethode.
+	 * 
+	 * @param args Kommandozeilenargumente, werden nicht ausgewertet
+	 */
 	public static void main( String[] args ) {
 
 		System.out.println();
