@@ -4,44 +4,39 @@ import java.util.concurrent.atomic.AtomicLong;
 
 
 /**
- * Generator für eindeutige IDs. Die IDs sind eindeutig, auch wenn mehrere
- * Prozesse (Threads) gleichzeitig IDs anfordern. Für die Eindeutigkeit
- * ist es auch erforderlich, dass es nicht mehr als eine Instanz von
- * dieser Klasse gibt.
+ * Generator for unique IDs. The IDs are unique, even if several processes 
+ * (threads) request IDs at the same time. To ensure uniqueness, it is also 
+ * necessary that there is no more than one instance of this class.
  * <br><br>
  * 
- * Die folgende Klasse setzt das Entwurfsmuster "Singleton" (Einzelstück)
- *  um, es kann von ihr also höchstens eine Instanz/Objekt geben. 
+ * The following class implements the "Singleton" design pattern,
+ * meaning that there can be at most one instance/object of it. 
  */
 public class IdGenerator {
 
-	/** Einzelner Long-Wert, der atomar erhöht wird. */
+	/** Single long value that is incremented atomically. */
 	private final AtomicLong _zaehler = new AtomicLong( 1 );
 
 	
-	/** 
-	 * Diese Klassenvariable referenziert die einzige Instanz
-	 * der Klasse.
-	 */
+	/**  This class variable references the only instance of the class. */
 	private static IdGenerator sSingletonInstance = null;
 	
 
 	/**
-	 * Der einzige Konstruktor der Klasse ist privat, so dass
-	 * die Klasse nicht von anderen Klassen instanziiert werden
-	 * kann.
+	 * The only constructor of the class is private, so that
+     * the class cannot be instantiated by other classes.
 	 */
 	private IdGenerator() {
 		
-		// absichtlich leer gelassen
+		// intentionally left blank
 	}
 	
 	
 	/**
-	 * Methode, um Referenz auf Singleton-Instanz zu bekommen.
-	 * Die Singleton-Instanz wird bei Bedarf erzeugt. 
+	 * MMethod to obtain a reference to the singleton instance.
+     * The singleton instance is created when needed. 
 	 * 
-	 * @return Singleton-Instanz 
+	 * @return Singleton Instance
 	 */
 	public static IdGenerator getSingletonInstance() {
 		
@@ -55,11 +50,11 @@ public class IdGenerator {
 	
 	
 	/**
-	 * Methode, um die nächste ID abzurufen.
+	 * Method to get next ID.
 	 * 
-	 * @return Eindeutige ID
+	 * @return Unique ID
 	 */
-    public long naechsteId () {
+    public long nextId () {
     	
         return _zaehler.incrementAndGet();
     }

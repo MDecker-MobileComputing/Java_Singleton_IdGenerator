@@ -1,34 +1,33 @@
 package de.mide;
 
 /**
- * Klasse mit main-Methode.
+ * Class with main method
  */
 public class Main {
 
 	/**
-	 * Methode holt sich die Referenz auf die Singleton-Instanz
-	 * des IdGenerators, fragt die nächste Id ab und schreibt
-	 * diese auf die Konsole.
+	 * The method retrieves the reference to the singleton instance of the IdGenerator, 
+	 * queries the next Id, and writes it to the console.
 	 */
-	private static void methode() {
+	private static void method() {
 		
 		IdGenerator generator = IdGenerator.getSingletonInstance();
-		long id = generator.naechsteId(); 
+		long id = generator.nextId(); 
 		System.out.println( "ID=" + id );
 	}
 	
 	
 	/**
-	 * Einstiegsmethode.
+	 * Entry method
 	 * 
-	 * @param args Kommandozeilenargumente, werden nicht ausgewertet
+	 * @param args Comnmand line arguments are not evaluated
 	 */
 	public static void main( String[] args ) {
 
 		System.out.println();
 		
-		methode();
-		methode();
+		method();
+		method();
 		
 		System.out.println();
 	}

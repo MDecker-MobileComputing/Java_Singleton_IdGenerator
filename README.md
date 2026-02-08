@@ -1,12 +1,14 @@
-# Entwurfsmuster "Singleton" in Java #
+# Example for Design Pattern "Singleton" in Java #
 
 <br>
 
-Dieses Repo enthält ein Eclipse-Projekt für ein Java-Programm, welches das Entwurfsmuster
-[Singleton](https://www.ionos.de/digitalguide/websites/web-entwicklung/was-ist-das-singleton-pattern/)
-demonstriert.
-Mit diesem Entwurfsmuster kann gewährleistet werden, dass es von einer bestimmten Klasse höchstens
-ein Objekt gibt.
+This repository contains an Eclipse project for a Java program that demonstrates the design pattern  
+[Singleton](https://www.ionos.de/digitalguide/websites/web-entwicklung/was-ist-das-singleton-pattern/).
+
+With this design pattern, it can be ensured that there is at most one object of a particular class.
+
+The example is class `IdGenerator` for providing unique IDs (e.g., for numbering message). 
+To provide unique IDs there must not be more than one instance of this class.
 
 <br>
 
